@@ -1,2 +1,0 @@
-# aromas
-estrutura da aromas
