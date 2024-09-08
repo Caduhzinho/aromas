@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+}
+
+header.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+/* Ajustes no logo e ícone de acessibilidade */
+#menu-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+#menu-left img {
+    margin-right: 10px;
+}
+
+.icon-access {
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#Logo {
+    height: 50px;
+}
+
+/* Barra de busca */
+#search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #dfead6;
+    border-radius: 25px;
+    padding: 5px;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+#txtBuscar {
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+#btnBuscar {
+    background-color: #B8AC3B;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btnBuscar img {
+    height: 20px;
+    width: 20px;
+}
+
+/* Ícones de favoritos, carrinho e conta */
+#menu-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon {
+    margin: 0 10px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+#user-account {
+    font-size: 14px;
+    text-align: right;
+}
+
+/* Menu de navegação */
+.menu-nav {
+    width: 100%;
+    padding-top: 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.menu-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Ajuste a distância da linha */
+    left: 0;
+    right: 0;
+    height: 6px; /* Espessura da linha */
+    background-color: #106D40; /* Cor da linha */
+    border-radius: 25px; /* Arredondamento da linha */
+    width: 95%; /* Para deixar a linha menor que o menu */
+    margin: 0 auto; /* Centralizar */
+}
+
+.menu-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu-nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu-nav ul li a {
+    text-decoration: none;
+    color: #106D40;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-nav ul li a:hover {
+    color: #5EA147;
+}
+
+.menu-nav ul li:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #5EA147;
+}
+.carousel {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}

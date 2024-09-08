@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AROMAR</title>
+    <title>AROMAR Menu Replica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="" class="rel">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxics.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="menu">
+        <!-- Ícone de acessibilidade e logo -->
+        <div id="menu-left">
+            <img src="Svg/icon-acessibilidade.png" alt="Acessibilidade" class="icon-access"/>
+            <img src="Svg/Logo Aromas 1.png" alt="Logo AROMAR" id="Logo">
+        </div>
     
+        <!-- Barra de busca -->
+        <div id="search-bar">
+            <input type="text" id="txtBuscar" placeholder="Buscar..."/>
+            <button id="btnBuscar">
+                <img src="Svg/icone-busca.png" alt="Buscar"/>
+            </button>
+        </div>
+    
+        <!-- Ícones de conta, favoritos e carrinho -->
+        <div id="menu-icons">
+            <div class="icons">
+                <img src="Svg/image 13.png" alt="Favoritos" class="icon"/>
+                <img src="Svg/image 2.png" alt="Carrinho" class="icon"/>
+            </div>
+            <div id="user-account">
+                <a href="#">Olá! Entrar na <br/><ins>Minha conta</ins></a>
+            </div>
+        </div>
+    
+        <!-- Menu de navegação -->
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="#">LANÇAMENTOS</a></li>
+                <li><a href="#">PRESENTES</a></li>
+                <li><a href="#">PRODUTOS</a></li>
+                <li><a href="#">SHAMPOO</a></li>
+                <li><a href="#">GUIA DE BELEZA</a></li>
+                <li><a href="#">MARCAS</a></li>
+            </ul>
+        </nav>
+    </header>    
 </body>
 </html>
