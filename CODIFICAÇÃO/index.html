@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AROMAR Menu Replica</title>
+    <title>AROMAR</title>
+
+    <!-- Importando fontes do Google e ícones de caixas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxics.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Link para arquivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Cabeçalho: Inclui logotipo, barra de busca e ícones de navegação -->
     <header class="menu">
-        <!-- Ícone de acessibilidade e logo -->
         <div id="menu-left">
             <img src="Svg/icon-acessibilidade.png" alt="Acessibilidade" class="icon-access"/>
             <img src="Svg/Logo Aromas 1.png" alt="Logo AROMAR" id="Logo">
@@ -37,7 +43,7 @@
             </div>
         </div>
     
-        <!-- Menu de navegação -->
+        <!-- Menu de navegação principal -->
         <nav class="menu-nav">
             <ul>
                 <li><a href="#">LANÇAMENTOS</a></li>
@@ -48,6 +54,106 @@
                 <li><a href="#">MARCAS</a></li>
             </ul>
         </nav>
-    </header>    
+    </header>
+
+    <!-- Seção do Banner (Carrossel) -->
+    <section class="banner-container">
+        <div class="banner-slide">
+            <!-- Cada "banner-item" contém uma imagem -->
+            <div class="banner-item">
+                <img src="Svg/Icone-slide/sabonete_natural_1.jpg" alt="Sabonete Natural">
+            </div>
+            <div class="banner-item">
+                <img src="Svg/Icone-slide/sabonete_natural_2.jpg" alt="Sabonete Artesanal">
+            </div>
+            <div class="banner-item">
+                <img src="Svg/Icone-slide/sabonete_natural_3.jpg" alt="Sabonete Ecológico">
+            </div>
+        </div>
+        <!-- Botões para navegar pelo carrossel -->
+        <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Seção de Categorias de produtos -->
+    <section class="categories">
+        <div class="category">
+            <img src="Svg/Parte 2/Maquiagem 1.svg" alt="Maquiagem">
+            <p>MAQUIAGEM</p>
+        </div>
+        <div class="category">
+            <img src="Svg/Parte 2/2 1.svg" alt="Shampoo">
+            <p>SHAMPOO</p>
+        </div>
+        <div class="category">
+            <img src="Svg/Parte 2/3 1.svg" alt="Presente">
+            <p>PRESENTE</p>
+        </div>
+    </section>
+
+    <!-- Seção de Ofertas -->
+    <section class="offers">
+        <div class="offer">
+            <img src="Svg/Parte 2/Parte 2.2/1.png" alt="Frete Grátis">
+        </div>
+        <div class="offer">
+            <img src="Svg/Parte 2/Parte 2.2/3.png" alt="Típicos do Maranhão">
+        </div>
+        <div class="offer">
+            <img src="Svg/Parte 2/Parte 2.2/2.png" alt="Pague com Pix">
+        </div>
+    </section>
+
+    <!-- Seção de Produtos (especificamente do Maranhão) -->
+    <section class="maranhao-selection">
+        <h2>UMA SELEÇÃO ESPECIAL DO MARANHÃO!</h2>
+        <div class="products">
+            <!-- Cada produto é apresentado dentro de um cartão -->
+            <div class="product-card">
+                <img src="Svg/Parte 2/Parte 2.2/Home - AROMAr (3)/6261-77d77fbf424891b7a516500656476545-1024-1024 1.png" alt="Shampoo fortalecedor - Açaí">
+                <h3>Shampoo fortalecedor - Açaí</h3>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="price">
+                    <span class="old-price">120,00R$</span>
+                    <span class="new-price">37,90R$</span>
+                </div>
+                <button class="add-to-cart">🛒 Add</button>
+                <p>5x de 5,90</p>
+                <small>Obs: Do produto</small>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <img src="Svg/Parte 2/Parte 2.2/Home - AROMAr (3)/7c2a9d3bf7804b2f508586c7a139e2e4awsaccesskeyidakiatclmsgfx4j7tu445expires1702207146signaturetr3xhgpawlojlt7cenasrtzmzcg3d-dc286e76d280f41d1716996151673371-1024-1024 1.png" alt="Kit shampoo e condicionador - Cupuaçu">
+                <h3>Kit shampoo e condicionador - Cupuaçu</h3>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="price">
+                    <span class="old-price">120,00R$</span>
+                    <span class="new-price">37,90R$</span>
+                </div>
+                <button class="add-to-cart">🛒 Add</button>
+                <p>5x de 5,90</p>
+                <small>Obs: Do produto</small>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <img src="Svg/Parte 2/Parte 2.2/Home - AROMAr (3)/shampoo-solido-relaxar-4_800x 2.png" alt="Condicionador anti-friz - Alecrim">
+                <h3>Condicionador anti-friz - Alecrim</h3>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="price">
+                    <span class="old-price">120,00R$</span>
+                    <span class="new-price">37,90R$</span>
+                </div>
+                <button class="add-to-cart">🛒 Add</button>
+                <p>5x de 5,90</p>
+                <small>Obs: Do produto</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Importando script JS para controlar a navegação do banner -->
+    <script src="script.js"></script>
+
 </body>
 </html>

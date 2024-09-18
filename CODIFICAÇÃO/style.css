@@ -1,14 +1,17 @@
+/* Reset básico de margem, padding e box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais do body */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f9f9f9;
 }
 
+/* Estilos do Header: Configuração do layout do menu */
 header.menu {
     display: flex;
     flex-direction: column;
@@ -22,7 +25,7 @@ header.menu {
     z-index: 999;
 }
 
-/* Ajustes no logo e ícone de acessibilidade */
+/* Ajustes para a área esquerda do menu (logo e acessibilidade) */
 #menu-left {
     position: absolute;
     top: 20px;
@@ -31,6 +34,7 @@ header.menu {
     align-items: center;
 }
 
+/* Estilos dos ícones de acessibilidade e logo */
 #menu-left img {
     margin-right: 10px;
 }
@@ -43,10 +47,10 @@ header.menu {
 }
 
 #Logo {
-    height: 50px;
+    height: 80px;
 }
 
-/* Barra de busca */
+/* Barra de busca no header */
 #search-bar {
     display: flex;
     align-items: center;
@@ -57,6 +61,7 @@ header.menu {
     margin-bottom: 10px;
 }
 
+/* Campo de input e botão da barra de busca */
 #txtBuscar {
     border: none;
     outline: none;
@@ -80,7 +85,7 @@ header.menu {
     width: 20px;
 }
 
-/* Ícones de favoritos, carrinho e conta */
+/* Ícones de favoritos, carrinho e área da conta do usuário */
 #menu-icons {
     position: absolute;
     top: 20px;
@@ -111,27 +116,29 @@ header.menu {
     text-align: right;
 }
 
-/* Menu de navegação */
+/* Menu de navegação principal */
 .menu-nav {
     width: 100%;
-    padding-top: 10px;
+    padding-top: 2px;
     position: relative;
     margin-bottom: 20px;
 }
 
+/* Estilização para a barra embaixo do menu */
 .menu-nav::after {
     content: '';
     position: absolute;
-    bottom: -10px; /* Ajuste a distância da linha */
+    bottom: -40px;
     left: 0;
     right: 0;
-    height: 6px; /* Espessura da linha */
-    background-color: #106D40; /* Cor da linha */
-    border-radius: 25px; /* Arredondamento da linha */
-    width: 95%; /* Para deixar a linha menor que o menu */
-    margin: 0 auto; /* Centralizar */
+    height: 6px;
+    background-color: #106D40;
+    border-radius: 25px;
+    width: 95%;
+    margin: 0 auto;
 }
 
+/* Lista de links do menu */
 .menu-nav ul {
     display: flex;
     justify-content: center;
@@ -163,39 +170,176 @@ header.menu {
     height: 2px;
     background-color: #5EA147;
 }
-.carousel {
+
+/* Estilos do carrossel de banners */
+.banner-container {
+    width: 100%;
+    max-width: 1800px;
+    height: 600px;
+    margin: 50px auto;
     position: relative;
-    width: 800px;
-    height: 400px;
     overflow: hidden;
+    border-radius: 10px;
 }
 
-.carousel-inner {
+.banner-slide {
     display: flex;
+    width: 300%;
+    height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-inner img {
+.banner-item {
+    flex: 1;
+}
+
+.banner-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.prev, .next {
+/* Botões para navegar no carrossel */
+.prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 3rem;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
     cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%;
+    z-index: 10;
 }
 
-.prev {
+.prev-btn {
     left: 10px;
 }
 
-.next {
+.next-btn {
     right: 10px;
 }
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Seção de categorias */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.category {
+    text-align: center;
+}
+
+.category img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.category p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Seção de ofertas e promoções */
+.offers {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.offer {
+    text-align: center;
+}
+
+/* Seção com produtos especiais */
+.maranhao-selection {
+    text-align: center;
+    padding: 20px;
+}
+
+.maranhao-selection h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cartões de produtos */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.rating {
+    color: orange;
+}
+
+.price {
+    margin: 10px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #106D40;
+}
+
+/* Botão de adicionar ao carrinho */
+.add-to-cart {
+    background-color: #106D40;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #5EA147;
+}
+
+.product-card p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+small {
+    display: block;
+    margin-top: 10px;
+    color: #999;
+}
+
